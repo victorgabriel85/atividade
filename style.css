@@ -1,11 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 body {
     background-color: #f4f7f6;
@@ -16,7 +14,6 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
-
 
 .card {
     background: #ffffff;
@@ -29,7 +26,6 @@ body {
     border: 1px solid #e2ece9;
 }
 
-
 h1 {
     font-size: 2rem;
     color: #2c3e50;
@@ -37,15 +33,17 @@ h1 {
     font-weight: 600;
 }
 
-
 .subtitle {
     font-size: 0.9rem;
     color: #7f8c8d;
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    display: inline-block;
+    border-right: 2px solid #7f8c8d;
+    white-space: nowrap;
+    animation: piscarCursor 0.7s step-end infinite;
 }
-
 
 p {
     font-size: 1.05rem;
@@ -54,29 +52,36 @@ p {
     margin-bottom: 30px;
 }
 
-
 .hobbies {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-
 .badge {
     padding: 8px 18px;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
+.badge:hover {
+    transform: scale(1.05);
+}
 
 .badge-code {
     background-color: #e3f2fd;
     color: #1e88e5;
 }
 
-
 .badge-soccer {
     background-color: #e8f5e9;
     color: #43a047;
+}
+
+@keyframes piscarCursor {
+    from, to { border-color: transparent }
+    50% { border-color: #7f8c8d; }
 }
